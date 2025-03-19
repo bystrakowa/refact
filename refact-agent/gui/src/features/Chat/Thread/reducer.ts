@@ -207,7 +207,10 @@ export const chatReducer = createReducer(initialState, (builder) => {
       action.payload.compression_strength &&
       action.payload.compression_strength !== "absent"
     ) {
-      state.thread.new_chat_suggested.wasSuggested = true;
+      state.thread.new_chat_suggested = {
+        ...state.thread.new_chat_suggested,
+        wasSuggested: true,
+      };
     }
   });
 
