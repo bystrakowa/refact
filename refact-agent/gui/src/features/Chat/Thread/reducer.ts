@@ -39,6 +39,7 @@ import {
   setIsNewChatSuggestionRejected,
   upsertToolCall,
   setIsNewChatCreationMandatory,
+  createNewChatWithMessagesToBeSent,
 } from "./actions";
 import { formatChatResponse } from "./utils";
 import {
@@ -339,7 +340,10 @@ export const chatReducer = createReducer(initialState, (builder) => {
       lastUserMessage?.compression_strength &&
       lastUserMessage.compression_strength !== "absent"
     ) {
-      state.thread.new_chat_suggested.wasSuggested = true;
+      state.thread.new_chat_suggested = {
+        ...state.thread.new_chat_suggested,
+        wasSuggested: true,
+      };
     }
   });
 
@@ -420,6 +424,19 @@ export const chatReducer = createReducer(initialState, (builder) => {
         action.payload.replaceOnly,
       );
     }
+  });
+
+  builder.addCase(createNewChatWithMessagesToBeSent, (state, action) => {
+    const currentThread = state.thread;
+    const newThread = createChatThread(
+      currentThread.tool_use ?? state.tool_use,
+      currentThread.integration,
+      currentThread.mode,
+    );
+    newThread.model = state.thread.model;
+    newThread.messages = action.payload.messages;
+    state.thread = newThread;
+    state.send_immediately = true;
   });
 
   builder.addMatcher(
