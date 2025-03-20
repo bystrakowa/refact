@@ -3,19 +3,31 @@ title: Supported Models in Refact
 description: Supported Models in Refact
 ---
 
-## Cloud Version of Refact
+## Cloud Version of Refact.ai
 
-### Completion models 
-- Refact/1.6B  
-- starcoder2/3b
+With Refact.ai, you can leverage the best SOTA models for your programming tasks: 
 
-### Chat models
-- GPT 3.5
-- GPT 4 (Pro plan)
+### AI Agent models
+- Claude 3.7 Sonnet
+- Claude 3.5 Sonnet
+- GPT-4o
+- o3-mini (for reasoning; enable in chat settings)
 
-## Self-Hosted Version of Refact
+### Completion model 
+- Qwen2.5-Coder-1.5B
 
-In Refact self-hosted you can select between the following models: 
+### Chat models 
+- Claude 3.7 Sonnet
+- Claude 3.5 Sonnet
+- GPT-4o
+- GPT-4o mini
+
+### BYOK (Bring your own key)
+As a option, you can connect your API key and use any model you want. Check out the instructions in [our BYOK Documentation] (https://docs.refact.ai/byok/).
+
+## Self-Hosted Version of Refact.ai
+
+In Refact.ai Self-hosted you can select between the following models: 
 
 ### Completion models 
 <table class="full-table">
