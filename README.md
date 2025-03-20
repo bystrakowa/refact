@@ -68,7 +68,7 @@ Refact Agent works effortlessly with the tools and databases you already use:
 
  ✅ **Integrated in-IDE Chat** – AI deeply understands your code and provides relevant, intelligent answers.  
 
- ✅ **Integrated with Tools** – Works with GitHub, GitLab, PostgreSQL, MySQL, Pdb, Docker, and shell commands.  
+ ✅ **Integrated with Tools** – Works with GitHub, GitLab, PostgreSQL, MySQL, Pdb, Docker, shell commands, [MCP Servers](https://docs.refact.ai/features/autonomous-agent/integrations/mcp/), and more. 
 
 ![integrations](https://lh7-rt.googleusercontent.com/docsz/AD_4nXc4DWYXF73AgPWAaFFGLTqEprWwA0im8R_A1QMo4QW4pTnSi1MCoP9L8udMZb5FPyN-CdgefaxJFGpX2ndn5nkjGBF2b_hZBNHogM7IM6SPvUIvUd9iE1lYIq7q-TB2qKzSGLk00A?key=zllGjEBckkx13bRZ6JIqX6qr)
 
